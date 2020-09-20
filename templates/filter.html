@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Filters</title>
+</head>
+<body>
+    <h2>jinja2 filters</h2>
+<ul>
+    {% for movie, length in movies|dictsort(flas, 'value') %}
+    <li>{{ movie|title }} : {{ length|round(1) }}</li>
+    {% endfor %}
+</ul>
+<hr>
+</body>
+</html>
